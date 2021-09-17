@@ -1,0 +1,39 @@
+//titles
+.section_title{
+  font-size: 4.6875rem;
+  color: $titleBlue;
+  font-weight: 700;
+  @include mq_md{
+    font-size: 3rem;
+  }
+  @include mq_sm{
+    font-size: 30px;
+  }
+}
+
+.page_title{
+  font-size: 4.625rem;
+  margin-bottom: 1rem;
+  & + span{
+    font-style: normal;
+    font-size: 1.625rem;
+    font-weight: 500;
+  }
+}
+
+.page_sub_title{
+  color: #fff;
+  font-size: 4rem;
+  letter-spacing: 0.055em;
+  font-weight: 700;
+  line-height: 1.1;
+  @include mq_lg{
+    font-size: 2.75rem;
+  }
+  @include mq_md{
+    font-size: 2.25rem;
+  }
+  @include mq_sm{
+    font-size: 1.875rem;
+  }
+}

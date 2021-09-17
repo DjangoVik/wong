@@ -1,0 +1,207 @@
+.content_gradient_section.press_page{
+  @include resp-padding(275,396);
+  .media_intro_video{
+    padding-left: 0;
+    .image{
+      width: 69%;
+      margin-left: auto;
+    }
+    .intro_desc{
+      transform: translateY(50%);
+      .article_link{
+        margin-top: 2rem;
+        margin-left: -0.5em;
+      }
+    }
+  }
+  @include mq_lg{
+    .media_intro_video .intro_desc{
+      width: 60%;
+      transform: none;
+    }
+  }
+  @include mq_md{
+    .media_intro_video{
+      .intro_desc{
+        width: 80%;
+      }
+      .image{
+        width: 80%;
+      }  
+    }
+  }
+  @include mq_md{
+    .media_intro_video{
+      .intro_desc{
+        width: 95%;
+      }
+      .image{
+        width: 100%;
+      }  
+    }
+  }
+}
+
+.media_section.press_page{
+  position: relative;
+  &:after, &:before{
+    @include bf_af;
+    background-image: url('../img/waves 2.svg');
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  &:before{
+    transform: rotate(-6.55deg);
+    max-width: 1081px;
+    width: 75.07vw;
+    max-height: 1508px;
+    height: 104.72vw; 
+    top: 0;
+    right: 0;
+  }
+  &:after{
+    max-width: 667px;
+    width: 46.32vw;
+    max-height: 1446px;
+    height: 100.4vw;
+    transform: rotate(-138.45deg);
+    left: 20%;
+    bottom: -10%;
+  }
+  .media_item{
+    .video_wrapper{
+      .video_box{
+        padding-bottom: 100%;
+        &:before{
+          opacity: 0.2;
+        }
+      }
+    }
+    .video_desc{
+      display: block;
+      padding: 1.25rem 1rem 1rem 1.25rem;
+      .title{
+        margin-bottom: 0.25rem;
+      }
+      .subtitle{
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: $lightTextBlue;
+        margin-bottom: 1em;
+      }
+      .article_link{
+        margin-top: 1.5rem;
+        margin-left: -.5rem;
+      }
+    }
+  }    
+}
+
+.news_section.press_page{
+  .press_reviews_block{
+    margin-top: 232px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .press_reviews_item{
+      width: calc(50% - 4rem);
+      margin-bottom: 10rem;
+      .reviews_content{
+        height: 22.5rem;
+        background-color: $lighterTextBlue;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 2rem 4.25rem 2rem;
+        .quote_place{
+          flex: 1;
+          display: flex;
+          align-items: center;
+        }
+        .link_wrapper{
+          text-align: right;
+          padding-bottom: .75rem;
+          border-bottom: 1px solid #fff;
+        }
+      }
+      .reviews_author{
+        background-color: #fff;
+        padding: 1.5rem 2rem;
+        margin-right: -2.25rem;
+        width: 82%;
+        margin-left: auto;
+        margin-top: -3.25rem;
+        height: 11.25rem;
+        .name{
+          font-size: 2.125rem;
+          margin-bottom: 0.3em;
+          color: $darkenTextBlue;
+          font-weight: 700;
+        }
+        .position{
+          font-size: 1.375rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  @include mq_lg{
+    &.section_top_wave:before{
+      top: 3.5rem;
+    }
+    .press_reviews_block{
+      margin-top: 8rem;
+      .press_reviews_item{
+        width: calc(50% - 2.5rem);
+        margin-bottom: 5rem;
+        .reviews_author{
+          .name{
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  @include mq_md{
+    &.section_top_wave:before{
+      top: 2.2rem;
+    }
+    .press_reviews_block{
+      .press_reviews_item{
+        width: 100%;
+        padding-right: 2rem;
+        .reviews_author{
+          .name{
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  @include mq_sm{
+    &.section_top_wave:before{
+      top: 1.2rem;
+    }
+    .press_reviews_block{
+      .press_reviews_item{
+        .reviews_content{
+          height: 14rem;
+          font-size: 0.75rem;
+        }
+        .reviews_author{
+          margin-top: -2.25rem;
+          height: 9.25rem;
+          padding: 1rem 1.25rem;
+          .name{
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  @include mq_x_sm{
+    &.section_top_wave:before{
+      top: 1.8rem;
+    }
+  }
+}

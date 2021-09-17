@@ -1,0 +1,99 @@
+footer{
+  background-color: $lightTextBlue;
+  padding: 3.5rem 0 2rem;
+  position: relative;
+  z-index: 10;
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    .footer_menu{
+      margin-right: auto;
+      margin-bottom: 7.5rem;
+      ul{
+        column-count: 2;
+        column-gap: 9rem;        
+        li{
+          margin-bottom: 1.2em;
+          a{
+            color: $darkTextBlue;
+            &:hover{
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .follow_block{
+      .label{
+        font-weight: 600;
+        margin-bottom: 2.4em;
+      }
+      ul{
+        display: inline-flex;
+        align-items: center;
+        li{
+          margin-right: 1.5rem;
+          &:last-of-type{
+            margin-right: 0;
+          }
+          a{
+            &:hover{
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
+    .copyright{
+      width: 100%;
+      text-align: center;
+      font-size: 0.75rem;
+      line-height: 1.5;
+    }
+  }
+  @include mq_md{
+    .container .footer_menu ul{
+      column-gap: 3rem;
+    }
+  }
+  @include mq_sm{
+    .container{
+      .footer_menu{
+        margin-bottom: 3rem;
+        ul{
+          li{
+            font-size: 1rem;
+            margin-bottom: 1.5em;
+            a{
+            }
+          }
+        }  
+      }
+      .follow_block{
+        .label{
+          margin-bottom: 1.5rem;
+        }
+        ul{
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  @include mq_xx_sm{
+    .container{
+      .footer_menu{
+        width: 100%;
+      }
+      .follow_block{
+        margin-bottom: 2rem;
+        width: 100%;
+        .label{
+          text-align: center;
+        }
+      }
+    }
+  }
+}

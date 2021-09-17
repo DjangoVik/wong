@@ -1,0 +1,19 @@
+//settings and libs
+@import "inc/default";
+@import "inc/fonts";
+
+@import "inc/vars";
+@import "inc/libs";
+@import "inc/global";
+@import "inc/components";
+
+//parts
+@import "parts/header";
+@import "parts/footer";
+
+//pages
+@import "pages/frontpage";
+@import "pages/about";
+@import "pages/media";
+@import "pages/contact";
+@import "pages/press";

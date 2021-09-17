@@ -1,0 +1,127 @@
+//font family
+$montserrat: 'Montserrat', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+//colors
+$darkBlue: #171A36;
+$titleBlue: #181C38;
+$darkTextBlue: #0D0E1D;
+$darkenTextBlue: #778293;
+$lightTextBlue: #9FAABC;
+$lighterTextBlue: #B8C2D3;
+$linkColor: #FEDBC2;
+$lightYellow: #FFCDA9;
+$customWhite: #F5F5F5;
+$lightGreyText: #C6C6C6;
+$buttonGrey: #B9B8B8;
+
+$maxWidth: 1440;
+//mixins
+@mixin calc_font($var){
+	$act: $var / $maxWidth;
+	$res: $act * 100;
+	font-size: #{$res + vw};
+}
+
+@mixin no_scrollbar{
+	&::-webkit-scrollbar { width: 0; }
+	-ms-overflow-style: none;
+	overflow: -moz-scrollbars-none;
+}
+
+@mixin resp-padding($const_up,$const_down) {
+	@media screen and (min-width: #{$maxWidth + px}) {
+		padding-top: #{$const_up + px};
+		padding-bottom: #{$const_down + px};
+	}
+	@media screen and (max-width: #{$maxWidth + px}) {
+		$coeff: $maxWidth / 100;
+		$resp_up: $const_up / $coeff;
+		$resp_down: $const_down / $coeff;
+		padding-top: #{$resp_up + vw};
+		padding-bottom: #{$resp_down + vw};
+	}
+}
+
+@mixin bf_af{
+	position: absolute;
+	content: "";
+}
+
+@mixin flex($ai, $jc){
+	display: flex;
+	align-items: $ai;
+	justify-content: $jc;
+}
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+	@media screen and (min-width: #{$maxWidth + px}) {
+		font-size: #{$pcSize + px};
+	}
+	@media screen and (max-width: #{$maxWidth + px}) {
+		$addSize: $pcSize - $mobSize;
+		$calcWidth: $maxWidth - 375;
+		font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$calcWidth}));
+	}
+}
+
+@mixin bg_set($bg_size){
+	background-size: $bg_size;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+@mixin resp_img{
+	position: relative;
+	img{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+//mq
+@mixin mq_xx_sm {
+  @media screen and (max-width: 370px) {
+    @content;
+  }
+}
+
+@mixin mq_x_sm {
+  @media screen and (max-width: 425px) {
+    @content;
+  }
+}
+
+@mixin mq_sm {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin mq_md {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mq_lg {
+  @media screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin mq_xl {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin mq_main {
+  @media screen and (max-width: 1440px) {
+    @content;
+  }
+}

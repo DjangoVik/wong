@@ -1,0 +1,282 @@
+.intro_section.contact_page{
+  .photo{
+    filter: grayscale(100%);
+  }
+  @include mq_x_sm{
+    .container .intro_quote span{
+      display: block;
+      max-width: 75%;
+      br{
+        display: none;
+      }
+    }
+  }
+}
+
+.contact_form_section{
+  padding: 0.625rem 0 13.5rem;
+  .contact_section_title{
+    font-size: 2.5rem;
+    line-height: 1.3;
+    color: $darkenTextBlue;
+    padding-bottom: 0.45em;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2.5em;
+    &:before{
+      @include bf_af;
+      width: 100vw;
+      height: 3px;
+      background-color: $lightTextBlue;
+      right: 1.35em;
+      bottom: 0;
+    }
+  }
+  .contacts_block{
+    padding: 3.75rem 4.25rem;
+    background: linear-gradient(180deg, #000000 0.71%, #171A36 51.24%);
+    width: 81.5%;
+    margin-left: -7.5rem;
+    color: #fff;
+    a{
+      color: #fff;
+    }
+    .title{
+      font-size: 2.5em;
+      line-height: 1.3;
+      margin-bottom: 0.5em;
+      color: $lightYellow;
+      &:not(:first-of-type){
+        margin-top: 1.5em;
+      }
+    }
+    .contact_item{
+      font-size: 1.125rem;
+      line-height: 2.5;
+      margin-bottom: 1.625rem;
+      max-width: 23rem;
+      strong{
+        font-size: 1.25rem;
+        letter-spacing: 0.055em;
+      }
+      a{
+        letter-spacing: 0.055em;
+        &:hover{
+          color: $linkColor;
+        }
+      }
+    }
+    .call_to_right{
+      color: $lightYellow;
+      font-size: 1.5rem;
+      font-weight: 700;
+      font-style: italic;
+      max-width: 50%;
+      margin-top: 2em;
+    }
+  }
+  .contact_form_wrapper{
+    width: 63.334%;
+    margin-left: auto;
+    margin-top: -46.25rem;
+    .inputs_wrapper{
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      background-color: #fff;
+      padding: 2.875rem 3.625rem;
+      margin-bottom: 3rem;
+    }
+    .input_box{
+      &:not(:last-of-type){
+        margin-bottom: 3rem;
+      }
+      div{
+        padding: 0 1.5rem;
+        background: rgba(159, 170, 188, 0.11);
+      }
+      label{
+        font-size: 1.5rem;
+        line-height: 1.1;
+        font-weight: 700;
+        color: $darkenTextBlue;
+        display: inline-block;
+        margin-bottom: 0.5em;
+      }
+      input, select, textarea{
+        width: 100%;
+        display: block;
+        background: rgba(159, 170, 188, 0.11);
+        border-radius: 5px;
+        height: 3.75rem;
+        padding: 0 1.5rem;
+      }
+      select{
+        background-color: transparent;
+        padding: 0;
+        appearance: auto;
+      }
+      textarea{
+        padding: 1.25rem 1.5rem;
+        height: 15rem;
+      }
+    }
+    .input_wrap{
+      display: flex;
+      justify-content: space-between;
+      .input_box{
+        width: calc(50% - .625rem);
+      }
+    }
+    .submit_btn{
+      border: 1px solid #000000;
+      border-radius: 10px;
+      padding: 1.5rem;
+      width: 100%;
+      font-size: 1.5rem;
+      font-weight: 700;
+      background-color: $darkBlue;
+      color: $lightYellow;
+      line-height: 1.1;
+      font-family: $roboto;
+      transition: .3s;
+      &:hover{
+        color: $darkBlue;
+        background-color: $lightYellow;
+      }
+    }
+  }
+  @include mq_xl{
+    .contacts_block{
+      margin-left: -3rem;
+      padding: 2.5rem 3rem;
+      .title{
+        font-size: 2rem;
+      }
+      .contact_item{
+        font-size: 1rem;
+        strong{
+          font-size: 1.125rem;
+        }
+      }
+    }
+    .contact_form_wrapper{
+      width: 55%;
+      margin-top: -40rem;
+      .inputs_wrapper{
+        padding: 2rem 3rem;
+        .input_box{
+          &:not(:last-of-type){
+            margin-bottom: 2rem;
+          }
+          label{
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+  }
+  @include mq_md{
+    padding-bottom: 6rem;
+    .contacts_block{
+      margin-left: 0;
+      width: 90%;
+      position: relative;
+      text-align: center;
+      padding-bottom: 6rem;
+      &:before{
+        @include bf_af;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        background: linear-gradient(180deg, #000000 0.71%, #171A36 51.24%);
+      }
+      .title{
+        font-size: 1.5rem;
+      }
+      .contact_item{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+        line-height: 2;
+      }
+      .call_to_right{
+        max-width: none;
+        font-size: 1.25rem;
+      }
+    }
+    .contact_form_wrapper{
+      width: 80%;
+      margin-top: -4rem;
+      position: relative;
+    }
+  }
+  @include mq_sm{
+    padding-bottom: 6rem;
+    .contact_section_title{
+      font-size: 2rem;
+      margin-bottom: 1.5em;
+    }
+    .contacts_block{
+      width: 100%;
+    }
+    .contact_form_wrapper{
+      width: 90%;
+      .input_wrap{
+        flex-direction: column;
+        .input_box{
+          width: 100%;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+  @include mq_x_sm{
+    padding-bottom: 6rem;
+    .contact_section_title{
+      font-size: 1.5rem;
+    }
+    .contacts_block{
+      padding-left: 1rem;
+      padding-right: 1rem;
+      .title{
+        font-size: 1.25rem;
+      }
+      .contact_item{
+        line-height: 1.75;
+        a{
+          word-break: break-all;
+        }
+      }
+    }
+    .contact_form_wrapper{
+      width: 95%;
+      .inputs_wrapper{
+        padding: 2rem 1.5rem;
+        .input_box{
+          div{
+            padding: 0 1rem;
+          }
+          input,select{
+            height: 3rem;
+          }
+          input{
+            padding: 0 1rem;
+          }
+          label{
+            font-size: 1rem;
+          }
+          textarea{
+            height: 12rem;
+            padding: 1rem;
+          }
+        }
+      }
+      .submit_btn{
+        padding: 1rem;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
