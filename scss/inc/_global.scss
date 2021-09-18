@@ -145,6 +145,11 @@ a{
     left: 0;
     background-color: rgba(159, 170, 188, 0.4);
   }
+  @include mq_sm{
+    &:before{
+      display: none;
+    }
+  }
   .caption{
     position: absolute;
     right: 0;
