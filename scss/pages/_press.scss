@@ -5,12 +5,17 @@
     .image{
       width: 69%;
       margin-left: auto;
+      transition: .3s ease-in-out;
+    }
+    &:hover{
+      .image{
+        transform: scale(1.1);
+      }
     }
     .intro_desc{
       transform: translateY(50%);
       .article_link{
         margin-top: 2rem;
-        margin-left: -0.5em;
       }
     }
   }
@@ -65,8 +70,8 @@
     max-height: 1446px;
     height: 100.4vw;
     transform: rotate(-138.45deg);
-    left: 20%;
-    bottom: -10%;
+    left: 10%;
+    top: 10%;
   }
   .media_item{
     .video_wrapper{
@@ -92,7 +97,6 @@
       }
       .article_link{
         margin-top: 1.5rem;
-        margin-left: -.5rem;
       }
     }
     &.big_menu_item{
@@ -169,6 +173,9 @@
           text-align: right;
           padding-bottom: .75rem;
           border-bottom: 1px solid #fff;
+          .article_link{
+            margin-right: 1.5rem;
+          }
         }
       }
       .reviews_author{

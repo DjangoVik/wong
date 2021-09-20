@@ -71,8 +71,10 @@
       color: $buttonGrey;
       transition: .3s;
       font-weight: 700;
+      border-bottom: 2px solid transparent;
       &.active, &:hover{
         color: #fff;
+        border-color: #fff;
       }
     }
   }
@@ -133,12 +135,31 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    .image{
+      transition: .3s;
+      &:hover{
+        transform: scale(1.1);
+        &:before{
+          opacity: 0;
+        }
+      }
+    }
     >div{
       width: calc(50% - 2.5rem);
     }
   }
   .tab_item{
     position: relative;
+    .image{
+      width: 50%;
+      transition: .3s;
+      &:hover{
+        transform: scale(1.1);
+        &:before{
+          opacity: 0;
+        }
+      }
+    }
     >div{
       position: relative;
       z-index: 2;

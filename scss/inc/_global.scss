@@ -144,6 +144,7 @@ a{
     top: 0;
     left: 0;
     background-color: rgba(159, 170, 188, 0.4);
+    transition: .3s;
   }
   @include mq_sm{
     &:before{

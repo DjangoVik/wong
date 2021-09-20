@@ -115,6 +115,11 @@
 .reviews_section{
   @include resp-padding(406,372);
   position: relative;
+  overflow: hidden;
+  .container{
+    position: relative;
+    z-index: 1;
+  }
   .next_section{
     bottom: 15rem;
     background-image: url("data:image/svg+xml,%3Csvg width='68' height='68' viewBox='0 0 68 68' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M34 45.3333C33.3379 45.3346 32.6964 45.1041 32.1866 44.6817L15.1866 30.515C14.608 30.0341 14.2442 29.343 14.1751 28.5938C14.106 27.8446 14.3374 27.0986 14.8183 26.52C15.2992 25.9414 15.9903 25.5775 16.7395 25.5084C17.4887 25.4394 18.2347 25.6707 18.8133 26.1517L34 38.845L49.1866 26.605C49.4764 26.3697 49.8099 26.1939 50.1679 26.0878C50.5258 25.9818 50.9012 25.9475 51.2725 25.987C51.6437 26.0265 52.0035 26.139 52.3311 26.318C52.6588 26.497 52.9478 26.7389 53.1816 27.03C53.4411 27.3213 53.6376 27.6631 53.7589 28.0339C53.8801 28.4047 53.9235 28.7966 53.8862 29.1849C53.849 29.5733 53.732 29.9497 53.5425 30.2908C53.353 30.6318 53.0951 30.93 52.785 31.1667L35.785 44.8517C35.2606 45.2073 34.6321 45.3769 34 45.3333Z' fill='%23171A36'/%3E%3C/svg%3E%0A");
@@ -122,7 +127,10 @@
   .wave_img{
     position: absolute;
     transform: rotate(90deg);
-    width: 100vw;
+    height: auto;
+    width: 200vw; 
+    top: 72rem;
+    left: -54%;
     img{
       width: 100%;
     }
@@ -150,6 +158,8 @@
       .image{
         position: relative;
         width: 53%;
+        line-height: 0.75;
+        transition: .3s;
           &:before{
           @include bf_af;
           width: 100%;
@@ -161,6 +171,7 @@
           transition: .3s ease-in-out;
         }
         &:hover{
+          transform: scale(1.1);
           &:before{
             opacity: 0;
           }
@@ -172,6 +183,7 @@
         background-color: $lightTextBlue;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         padding: 3.5% 4.2% 4% 7.5%;
+        transition: .3s;
         .title{
           color: #fff;
           font-size: 2rem;
@@ -182,6 +194,13 @@
           line-height: 1.6;
           color: $titleBlue;
           margin-bottom: 1.75em;
+          transition: .3s;
+        }
+        &:hover{
+          background-color: $darkenTextBlue;
+          .short_desc{
+            color: #fff;
+          }
         }
       }
     }    
@@ -341,7 +360,6 @@
           max-width: 80%;
         }
         .article_link{
-          margin-left: -0.5em;
           margin-top: 0.5em;
           &:hover{
             text-decoration: underline;
