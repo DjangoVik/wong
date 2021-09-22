@@ -48,10 +48,10 @@ a{
     padding: 0 3rem;
   }
   @include mq_sm{
-    padding: 0 2rem;
+    padding: 0 2.5rem;
   }
   @include mq_x_sm{
-    padding: 0 1rem;
+    padding: 0 10vw;
   }
 }
 
@@ -134,6 +134,16 @@ a{
   }
 }
 
+.photo{
+  text-align: right;
+}
+
+.transform_photo{
+  img{
+    width: 100%;
+  }
+}
+
 .light_cover{
   position: relative;
   line-height: 0.75;
@@ -162,5 +172,10 @@ a{
     font-style: italic;
     display: inline-block;
     padding: 0.5em 0;
+  }
+}
+@include mq_md{
+  .image{
+    transform: none !important;
   }
 }
